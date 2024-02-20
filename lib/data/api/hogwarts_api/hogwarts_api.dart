@@ -1,14 +1,13 @@
 import 'package:dio/dio.dart';
-import 'package:hogwarts_test_project/data/api/hogwarts_api/i_hogwarts_api.dart';
+import 'package:hogwarts_test_project/domain/api/character.dart';
+import 'package:retrofit/http.dart';
 
-class HogwartsApi extends IHogwartsApi {
-  HogwartsApi() : _dio = Dio(BaseOptions(baseUrl: _baseUrl));
-  static const String _baseUrl = 'https://hp-api.onrender.com';
+part 'hogwarts_api.g.dart';
 
-  final Dio _dio;
+@RestApi(baseUrl: 'https://hp-api.onrender.com')
+abstract class HogwartsApi {
+  factory HogwartsApi(Dio dio) = _HogwartsApi;
 
-  @override
-  Future<Response> getCharacters() {
-    return _dio.get('/api/characters');
-  }
+  @GET('/api/characters')
+  Future<List<Character>> getCharacters();
 }

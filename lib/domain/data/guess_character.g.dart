@@ -14,8 +14,7 @@ _$GuessCharacterImpl _$$GuessCharacterImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$GuessCharacterImplToJson(
-  _$GuessCharacterImpl instance,
-) =>
+        _$GuessCharacterImpl instance) =>
     <String, dynamic>{
       'character': instance.character,
       'attempts': instance.attempts,
