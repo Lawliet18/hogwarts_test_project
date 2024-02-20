@@ -9,3 +9,5 @@ I used a simple widgets without customization fo UI
 - freezed + json_serializable for code generation
 - dio for API calls
 - theme as a bonus
+
+https://github.com/Lawliet18/hogwarts_test_project/assets/39625958/cf1bcd16-3d72-4d1d-b492-29d7a6e41b1c
